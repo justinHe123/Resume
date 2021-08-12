@@ -1,0 +1,221 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Justin He} \\ \vspace{1pt}
+    \small 408-966-5659 $|$ \href{mailto:justinhe@ucla.com}{\underline{justinhe@ucla.edu}} $|$ 
+    \href{https://linkedin.com/in/justinhe24}{\underline{linkedin.com/in/justinhe24}} $|$
+    \href{https://github.com/justinHe123}{\underline{github.com/justinHe123}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California, Los Angeles (UCLA)}{Los Angeles, CA}
+      {Bachelor of Science in Computer Science, GPA 4.0}{Expected Jun. 2023}
+
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer}{Jun. 2021 -- Present}
+      {Fwaygo}{Los Angeles, CA}
+      \resumeItemListStart
+        \resumeItem{Developed microservices in Go for user/song data processing, report handling, and server‐to‐client messaging}
+        \resumeItem{Utilized RabbitMQ to facilitate interservice pub/sub communication between Docker container clusters on GKE}
+        \resumeItem{Created GraphQL APIs for user/song queries \& mutations and integrated them into the React Native frontend}
+        % \resumeItem{}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Software Developer}{Apr. 2021 -- Jun. 2021}
+      {NurLabs}{Los Angeles, CA}
+      \resumeItemListStart
+        \resumeItem{Collaborated with UCLA researchers to develop a Bash/Python
+        script for batch extracting spectroscopy data from .WDF files to
+        train a machine learning lung cancer detection model}
+        \resumeItem{Improved data extraction time from 2 minutes per document to
+        less than one second overall}
+        \resumeItem{Created a server and API for receiving and storing client
+        information using PostgreSQL, Node, and Express} 
+        \resumeItem{Communicated with founders at daily standups to iterate on
+        product direction and functionality} 
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Full Stack Developer}{Sep. 2020 -- Apr. 2021}
+      {WeChews}{Los Angeles, CA}
+      \resumeItemListStart
+        \resumeItem{Collaborated with a team of 10 to build a React Native app that matches users with restaurants to eat at}
+        \resumeItem{Implemented push notification service with Google Cloud Messaging and image uploading with Amazon S3}
+        \resumeItem{Developed a REST API for notifications using PostgreSQL, Node, and Express}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Roblox Reviews} $|$ \emph{Python, React, TypeScript, Google Cloud Platform, MySQL}}{Jun. 2020 -- Present}
+          \resumeItemListStart
+            \resumeItem{Developed a full-stack web app using React offering game review services for 3,000+ users}
+            \resumeItem{Designed APIs for accounts, reviews, and full text game searching using Python, Cloud Functions, and MySQL}
+            \resumeItem{Utilized Beautiful Soup to scrape Roblox pages for game metadata to store in a database}
+            \resumeItem{Published an extension to Chrome store adding a rating
+            interface to roblox.com with Roblox Reviews statistics}
+
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Note Global} $|$ \emph{React, JavaScript, Firebase, Realtime Database}}{Apr. 2021}
+          \resumeItemListStart
+            \resumeItem{Led a team of 4 students to create a React app for college students to find and share course notes}
+            \resumeItem{Implemented a PDF viewer interface in React and uploading utilizing Realtime Database and encoded PDFs}
+            \resumeItem{Performed a cost-benefit analysis of various data stores and storage methods for a serverless application}
+            \resumeItem{Guided team members using experience with React and JavaScript to overcome technological challenges}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Go, C++, JavaScript/TypeScript, Java, Bash, C, SQL} \\
+     \textbf{Frameworks}{: React, Node, Express, GraphQL} \\
+     \textbf{Developer Tools}{: Git, Docker, Google Cloud Platform, AWS}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
